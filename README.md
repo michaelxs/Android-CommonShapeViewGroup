@@ -32,7 +32,7 @@ To remove all shape files from the project, provide a generic shape style viewgr
 </declare-styleable>
 ```
 ## Usage
-ShapeRelativeLayout
+RelativeLayout
 ```xml
 <com.blue.view.ShapeRelativeLayout
     android:layout_width="200dp"
@@ -45,7 +45,7 @@ ShapeRelativeLayout
   // child view
 </com.blue.view.ShapeRelativeLayout>
 ```
-ShapeConstraintLayout
+ConstraintLayout
 ```xml
 <com.blue.view.ShapeConstraintLayout
     android:layout_width="200dp"

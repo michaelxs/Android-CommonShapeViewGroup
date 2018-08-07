@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.blue.view.ShapeRelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="120dp"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            app:csvg_cornerRadius="8dp"
+            app:csvg_fillColor="#00bc71"
+            app:csvg_withElevation="true">
+
+            <ImageView
+                android:id="@+id/iv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/about_qq" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv"
+                android:text="cornerRadius\nfillColor\nwithElevation"
+                android:textColor="#fff" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:text="sure" />
+        </com.blue.view.ShapeRelativeLayout>
+
+        <com.blue.view.ShapeRelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="120dp"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            app:csvg_cornerRadius="8dp"
+            app:csvg_endColor="#00bc71"
+            app:csvg_orientation="LEFT_RIGHT"
+            app:csvg_startColor="#8800bc71">
+
+            <ImageView
+                android:id="@+id/iv2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/about_qq" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv2"
+                android:text="cornerRadius\nstartColor\nendColor\nLEFT_RIGHT"
+                android:textColor="#fff" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:text="sure" />
+        </com.blue.view.ShapeRelativeLayout>
+
+        <com.blue.view.ShapeConstraintLayout
+            android:layout_width="250dp"
+            android:layout_height="36dp"
+            android:layout_margin="10dp"
+            app:csvg_cornerRadius="20dp"
+            app:csvg_fillColor="#4d000000">
+
+            <ImageView
+                android:id="@+id/iv3"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="12dp"
+                android:src="@drawable/msg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="please input"
+                android:textColor="#80ffffff"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="sure"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </com.blue.view.ShapeConstraintLayout>
+
+        <com.blue.view.ShapeConstraintLayout
+            android:layout_width="250dp"
+            android:layout_height="36dp"
+            android:layout_margin="10dp"
+            app:csvg_cornerPosition="topRight|bottomRight"
+            app:csvg_cornerRadius="20dp"
+            app:csvg_fillColor="#4d000000">
+
+            <ImageView
+                android:id="@+id/iv4"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="12dp"
+                android:src="@drawable/msg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="please input"
+                android:textColor="#80ffffff"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv4"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="sure"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </com.blue.view.ShapeConstraintLayout>
+
+        <com.blue.view.ShapeRelativeLayout
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
+            app:csvg_fillColor="#00bc71"
+            app:csvg_shapeMode="oval"
+            app:csvg_strokeColor="#000"
+            app:csvg_strokeWidth="1dp"
+            app:csvg_withElevation="true">
+
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="oval\nfillColor\nstrokeColor\nstrokeWidth\nwithElevation"
+                android:textColor="#fff"
+                android:textSize="12sp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv"
+                android:layout_centerHorizontal="true"
+                android:text="sure" />
+
+        </com.blue.view.ShapeRelativeLayout>
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

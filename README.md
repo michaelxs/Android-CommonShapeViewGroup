@@ -45,7 +45,7 @@ ShapeRelativeLayout
   // child view
 </com.blue.view.ShapeRelativeLayout>
 ```
-ShapeRelativeLayout
+ShapeConstraintLayout
 ```xml
 <com.blue.view.ShapeConstraintLayout
     android:layout_width="200dp"
@@ -58,7 +58,7 @@ ShapeRelativeLayout
     app:csvg_orientation="LEFT_RIGHT"
     app:csvg_startColor="#8800bc71">
   // child view
-</com.blue.view.ShapeRelativeLayout>
+</com.blue.view.ShapeConstraintLayout>
 ```
 ## License
 [Apache-2.0](https://opensource.org/licenses/Apache-2.0)

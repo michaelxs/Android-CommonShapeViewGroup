@@ -37,8 +37,6 @@ RelativeLayout
 <com.blue.view.ShapeRelativeLayout
     android:layout_width="200dp"
     android:layout_height="120dp"
-    android:layout_margin="10dp"
-    android:padding="10dp"
     app:csvg_cornerRadius="8dp"
     app:csvg_fillColor="#00bc71"
     app:csvg_withElevation="true">
@@ -50,8 +48,6 @@ ConstraintLayout
 <com.blue.view.ShapeConstraintLayout
     android:layout_width="200dp"
     android:layout_height="120dp"
-    android:layout_margin="10dp"
-    android:padding="10dp"
     app:csvg_cornerPosition="topRight|bottomRight"                                 
     app:csvg_cornerRadius="20dp"
     app:csvg_endColor="#00bc71"

@@ -50,9 +50,9 @@ ConstraintLayout
     android:layout_height="120dp"
     app:csvg_cornerPosition="topRight|bottomRight"                                 
     app:csvg_cornerRadius="20dp"
+    app:csvg_startColor="#8800bc71"
     app:csvg_endColor="#00bc71"
-    app:csvg_orientation="LEFT_RIGHT"
-    app:csvg_startColor="#8800bc71">
+    app:csvg_orientation="LEFT_RIGHT">
   // child view
 </com.blue.view.ShapeConstraintLayout>
 ```

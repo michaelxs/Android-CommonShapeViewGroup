@@ -1,7 +1,6 @@
 package com.blue.view
 
 import android.content.Context
-import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
 import android.os.Build
 import android.util.AttributeSet
@@ -18,10 +17,12 @@ class ShapeRelativeLayout @JvmOverloads constructor(
         defStyleAttr: Int = 0
 ) : RelativeLayout(context, attrs, defStyleAttr) {
 
-    private val TOP_LEFT = 1
-    private val TOP_RIGHT = 2
-    private val BOTTOM_RIGHT = 4
-    private val BOTTOM_LEFT = 8
+    private companion object {
+        val TOP_LEFT = 1
+        val TOP_RIGHT = 2
+        val BOTTOM_RIGHT = 4
+        val BOTTOM_LEFT = 8
+    }
 
     // 默认阴影值
     private val DEFAULT_ELEVATION = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_PX, 4f, resources.displayMetrics)
@@ -87,13 +88,13 @@ class ShapeRelativeLayout @JvmOverloads constructor(
     init {
         context.obtainStyledAttributes(attrs, R.styleable.CommonShapeViewGroup).apply {
             mShapeMode = getInt(R.styleable.CommonShapeViewGroup_csvg_shapeMode, 0)
-            mFillColor = getColor(R.styleable.CommonShapeViewGroup_csvg_fillColor, Color.parseColor("#FFFFFF"))
-            mStrokeColor = getColor(R.styleable.CommonShapeViewGroup_csvg_strokeColor, Color.parseColor("#00000000"))
+            mFillColor = getColor(R.styleable.CommonShapeViewGroup_csvg_fillColor, 0xFFFFFFFF.toInt())
+            mStrokeColor = getColor(R.styleable.CommonShapeViewGroup_csvg_strokeColor, 0)
             mStrokeWidth = getDimensionPixelSize(R.styleable.CommonShapeViewGroup_csvg_strokeWidth, 0)
             mCornerRadius = getDimensionPixelSize(R.styleable.CommonShapeViewGroup_csvg_cornerRadius, 0)
             mCornerPosition = getInt(R.styleable.CommonShapeViewGroup_csvg_cornerPosition, -1)
-            mStartColor = getColor(R.styleable.CommonShapeViewGroup_csvg_startColor, Color.parseColor("#FFFFFF"))
-            mEndColor = getColor(R.styleable.CommonShapeViewGroup_csvg_endColor, Color.parseColor("#FFFFFF"))
+            mStartColor = getColor(R.styleable.CommonShapeViewGroup_csvg_startColor, 0xFFFFFFFF.toInt())
+            mEndColor = getColor(R.styleable.CommonShapeViewGroup_csvg_endColor, 0xFFFFFFFF.toInt())
             mOrientation = getColor(R.styleable.CommonShapeViewGroup_csvg_orientation, 0)
             mWithElevation = getBoolean(R.styleable.CommonShapeViewGroup_csvg_withElevation, false)
             recycle()
@@ -105,7 +106,7 @@ class ShapeRelativeLayout @JvmOverloads constructor(
         // 初始化shape
         with(mGradientDrawable) {
             // 渐变色
-            if (mStartColor != Color.parseColor("#FFFFFF") && mEndColor != Color.parseColor("#FFFFFF")) {
+            if (mStartColor != 0xFFFFFFFF.toInt() && mEndColor != 0xFFFFFFFF.toInt()) {
                 colors = intArrayOf(mStartColor, mEndColor)
                 when (mOrientation) {
                     0 -> orientation = GradientDrawable.Orientation.TOP_BOTTOM
@@ -131,7 +132,7 @@ class ShapeRelativeLayout @JvmOverloads constructor(
                 cornerRadii = getCornerRadiusByPosition()
             }
             // 默认的透明边框不绘制
-            if (mStrokeColor != Color.parseColor("#00000000")) {
+            if (mStrokeColor != 0) {
                 setStroke(mStrokeWidth, mStrokeColor)
             }
         }

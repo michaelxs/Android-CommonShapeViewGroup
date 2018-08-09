@@ -171,10 +171,10 @@ class ShapeRelativeLayout @JvmOverloads constructor(
         return flagSet or flag == flagSet
     }
 
-    private companion object {
-        val TOP_LEFT = 1
-        val TOP_RIGHT = 2
-        val BOTTOM_RIGHT = 4
-        val BOTTOM_LEFT = 8
+    companion object {
+        const val TOP_LEFT = 1
+        const val TOP_RIGHT = 2
+        const val BOTTOM_RIGHT = 4
+        const val BOTTOM_LEFT = 8
     }
 }

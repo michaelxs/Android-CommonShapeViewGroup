@@ -17,13 +17,6 @@ class ShapeConstraintLayout @JvmOverloads constructor(
         defStyleAttr: Int = 0
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
 
-    private companion object {
-        val TOP_LEFT = 1
-        val TOP_RIGHT = 2
-        val BOTTOM_RIGHT = 4
-        val BOTTOM_LEFT = 8
-    }
-
     // 默认阴影值
     private val DEFAULT_ELEVATION = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_PX, 4f, resources.displayMetrics)
 
@@ -176,5 +169,12 @@ class ShapeConstraintLayout @JvmOverloads constructor(
      */
     private fun containsFlag(flagSet: Int, flag: Int): Boolean {
         return flagSet or flag == flagSet
+    }
+
+    private companion object {
+        val TOP_LEFT = 1
+        val TOP_RIGHT = 2
+        val BOTTOM_RIGHT = 4
+        val BOTTOM_LEFT = 8
     }
 }

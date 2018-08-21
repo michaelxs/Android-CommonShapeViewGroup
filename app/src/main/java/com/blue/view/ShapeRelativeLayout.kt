@@ -4,7 +4,6 @@ import android.content.Context
 import android.graphics.drawable.GradientDrawable
 import android.os.Build
 import android.util.AttributeSet
-import android.util.TypedValue
 import android.widget.RelativeLayout
 import com.blue.activity.R
 
@@ -18,7 +17,7 @@ class ShapeRelativeLayout @JvmOverloads constructor(
 ) : RelativeLayout(context, attrs, defStyleAttr) {
 
     // 默认阴影值
-    private val DEFAULT_ELEVATION = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_PX, 4f, resources.displayMetrics)
+    private val DEFAULT_ELEVATION = 4f
 
     /**
      * shape模式
@@ -118,7 +117,7 @@ class ShapeRelativeLayout @JvmOverloads constructor(
             }
             // 统一设置圆角半径
             if (mCornerPosition == -1) {
-                cornerRadius = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_PX, mCornerRadius.toFloat(), resources.displayMetrics)
+                cornerRadius = mCornerRadius.toFloat()
             }
             // 根据圆角位置设置圆角半径
             else {

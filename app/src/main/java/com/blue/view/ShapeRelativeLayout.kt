@@ -165,6 +165,7 @@ class ShapeRelativeLayout @JvmOverloads constructor(
 
     /**
      * 是否包含对应flag
+     * 按位或
      */
     private fun containsFlag(flagSet: Int, flag: Int): Boolean {
         return flagSet or flag == flagSet

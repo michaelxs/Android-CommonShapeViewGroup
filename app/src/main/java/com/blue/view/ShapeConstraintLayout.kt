@@ -78,17 +78,17 @@ class ShapeConstraintLayout @JvmOverloads constructor(
     private val mGradientDrawable: GradientDrawable by lazy { GradientDrawable() }
 
     init {
-        context.obtainStyledAttributes(attrs, R.styleable.CommonShapeViewGroup).apply {
-            mShapeMode = getInt(R.styleable.CommonShapeViewGroup_csvg_shapeMode, 0)
-            mFillColor = getColor(R.styleable.CommonShapeViewGroup_csvg_fillColor, 0xFFFFFFFF.toInt())
-            mStrokeColor = getColor(R.styleable.CommonShapeViewGroup_csvg_strokeColor, 0)
-            mStrokeWidth = getDimensionPixelSize(R.styleable.CommonShapeViewGroup_csvg_strokeWidth, 0)
-            mCornerRadius = getDimensionPixelSize(R.styleable.CommonShapeViewGroup_csvg_cornerRadius, 0)
-            mCornerPosition = getInt(R.styleable.CommonShapeViewGroup_csvg_cornerPosition, -1)
-            mStartColor = getColor(R.styleable.CommonShapeViewGroup_csvg_startColor, 0xFFFFFFFF.toInt())
-            mEndColor = getColor(R.styleable.CommonShapeViewGroup_csvg_endColor, 0xFFFFFFFF.toInt())
-            mOrientation = getColor(R.styleable.CommonShapeViewGroup_csvg_orientation, 0)
-            mWithElevation = getBoolean(R.styleable.CommonShapeViewGroup_csvg_withElevation, false)
+        context.obtainStyledAttributes(attrs, R.styleable.ShapeConstraintLayout).apply {
+            mShapeMode = getInt(R.styleable.ShapeConstraintLayout_csvg_shapeMode, 0)
+            mFillColor = getColor(R.styleable.ShapeConstraintLayout_csvg_fillColor, 0xFFFFFFFF.toInt())
+            mStrokeColor = getColor(R.styleable.ShapeConstraintLayout_csvg_strokeColor, 0)
+            mStrokeWidth = getDimensionPixelSize(R.styleable.ShapeConstraintLayout_csvg_strokeWidth, 0)
+            mCornerRadius = getDimensionPixelSize(R.styleable.ShapeConstraintLayout_csvg_cornerRadius, 0)
+            mCornerPosition = getInt(R.styleable.ShapeConstraintLayout_csvg_cornerPosition, -1)
+            mStartColor = getColor(R.styleable.ShapeConstraintLayout_csvg_startColor, 0xFFFFFFFF.toInt())
+            mEndColor = getColor(R.styleable.ShapeConstraintLayout_csvg_endColor, 0xFFFFFFFF.toInt())
+            mOrientation = getColor(R.styleable.ShapeConstraintLayout_csvg_orientation, 0)
+            mWithElevation = getBoolean(R.styleable.ShapeConstraintLayout_csvg_withElevation, false)
             recycle()
         }
     }
